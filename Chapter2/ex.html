@@ -14,6 +14,7 @@
 			<!-- データをそのまま表示する -->
 			<p> {{ myText }}</p>
 			<p> {{ myText1 }}</p>
+			<p v-text="myText2"></p>
 
 		</div>
 
@@ -22,7 +23,8 @@
 				el: '#app',
 				data: {
 					myText:'ex.ex.ex.ex.',
-					myText1:'Test1' 
+					myText1:'Test1',
+					myText2:'Hello' 
 				}
 			})
 		</script>
