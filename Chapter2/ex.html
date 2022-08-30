@@ -8,17 +8,17 @@
 	</head>
 	
 	<body>
-		<h2>データをそのまま表示する例</h2>
+		<h2>オブジェクトデータを表示する</h2>
 		<div id="app">
-			{{myArray}}
-			{{myArray[0]}}
+			<p>{{myTea}}</p>
+			<p>{{myTea.name}}￥{{myTea.price}}</p>
 		</div>
 
 		<script>
 			new Vue({
 				el: '#app',
 				data: {
-					myArray:["ダージリン","アールグレイ","セイロン"]
+					myTea:{name:'ダージリン',price:600}
 				}
 			})
 		</script>
