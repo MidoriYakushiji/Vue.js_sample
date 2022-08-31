@@ -8,16 +8,16 @@
 	</head>
 	
 	<body>
-		<h2>画像を指定する例</h2>
+		<h2>要素の属性をデータで指定する</h2>
 		<div id="app">
-			<img v-bind:src="myTea" alt="frog">
+			<p v-bind:style="{fontSize:mySize}">フォントをv-bindで指定</p>
 		</div>
 
 		<script>
 			new Vue({
 				el: '#app',
 				data: {
-					myTea:'face1.png'
+					mySize:'200px'
 				}
 			})
 		</script>
