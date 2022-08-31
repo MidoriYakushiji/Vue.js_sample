@@ -10,7 +10,9 @@
 	<body>
 		<h2>画像を指定する例</h2>
 		<div id="app">
+			<!-- 直接指定 -->
 			<img src="face1.png">直接指定</img><p>
+			<!-- v-bindで指定 省略は: -->
 			<img v-bind:src="fileName">v-bindで指定</img>
 		</div>
 
@@ -18,7 +20,7 @@
 			new Vue({
 				el: '#app',
 				data: {
-					fileName:'face1.png'
+					fileName:'face2.png'
 				}
 			})
 		</script>
