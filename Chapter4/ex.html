@@ -12,15 +12,16 @@
     <h2>練習ページ</h2>
 
     <div id="app">
-        <label><input type="checkbox" v-model="myAgree">
-            I,agree.</label>
-        <button v-bind:disabled="myAgree==false">send</button>
+        <label><input type="radio" value="face1.png" v-model="fileName">face1</label><br>
+        <label><input type="radio" value="face2.png" v-model="fileName">face2</label><br>
+        <p>{{fileName}} selected.</p>
+        <img v-bind:src="fileName">
     </div>
     <script>
         new Vue({
             el:'#app',
             data:{
-                myAgree:false
+                fileName:''
             }
         })
     </script>
