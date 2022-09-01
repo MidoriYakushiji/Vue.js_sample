@@ -12,14 +12,15 @@
     <h2>練習ページ</h2>
 
     <div id="app">
-        <label><input type="checkbox" v-model="myCheck">
-        チェックボックスは{{myCheck}}です。</label>
+        <label><input type="checkbox" v-model="myAgree">
+            I,agree.</label>
+        <button v-bind:disabled="myAgree==false">send</button>
     </div>
     <script>
         new Vue({
             el:'#app',
             data:{
-                myCheck:true
+                myAgree:false
             }
         })
     </script>
