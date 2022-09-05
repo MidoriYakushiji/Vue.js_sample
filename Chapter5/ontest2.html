@@ -10,6 +10,9 @@
 	<body>
 		<h2>クリックしたら、2回目は押せなくなるいいねボタンの例</h2>
 		<div id="app">
+			<!-- v-onでクリックしたら2回目は押せなくなる -->
+			<!-- v-bindで属性をつなぐ -->
+			<!-- v-on：イベント＝”メソッド名” -->
 			<button value="いいね" v-bind:disabled="isClick"
 				v-on:click="oneClick">いいね</button>
 		</div>
@@ -21,7 +24,7 @@
 			new Vue({
 				el: '#app',
 				data: {
-					isClick: false
+					isClick: false    //falseに設定
 				},
 				methods: {
 					oneClick: function() {
