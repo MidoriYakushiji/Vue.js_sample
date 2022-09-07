@@ -10,7 +10,11 @@
 	<body>
 		<h2>クリックしたらいいねボタンが消える例</h2>
 		<div id="app">
-			<button v-if="isShow" v-on:click="iine">いいね！</button>			
+			<!-- v-onのclickイベントでlineメソッドを呼び出し -->
+			<button v-if="isShow" v-on:click="iine">いいね！</button>
+			<!-- display:none -->
+			<button v-show="isShow" v-on:click="iine">いいね！</button>
+
 		</div>
 
 		<script>
