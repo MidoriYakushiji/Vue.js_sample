@@ -13,6 +13,7 @@
 			<ul>
 				<li v-for="item in myArray">{{ item }}</li>
 			</ul>
+			<!-- filterでボタンをクリックしたら表示する -->
 			<button v-on:click="evenData()">偶数だけにする</button><br>
 		</div>
 
@@ -22,6 +23,8 @@
 				data: {
 					myArray: [1,2,3,4,5,6]
 				},
+				// sortは配列を直接編集なので代入は不要
+				// filterはフィルター結果が戻り値なので変数への代入をしないと意味がない
 				methods: {
 					evenData: function() {
 						this.myArray = this.myArray.filter(
