@@ -12,7 +12,10 @@
 		<h3>好きなランチ投票</h3>
 		<div id="chart_div" style="height: 500px;"></div>
 		<div id="app">
+			<!-- 値と番号を1ずつ取り出しながら表示を繰り返し、種類と個数は省くためc>0 -->
+			
 			<li v-for="(item, c) in dataArray" v-if="c>0">{{item[0]}} : {{item[1]}}
+				<!-- 割り振った連番を引数にaddoneを呼び出す -->
 				<button v-on:click="addOne(c)">一票</button>
 			</li>
 		</div>
@@ -46,10 +49,13 @@
 				},
 				methods: {
 					addOne: function(val) {
+						// 対象番号のデータを取り出す
 						var obj = this.dataArray[val];
 						obj[1]++;
+						// 配列名．splice(開始インデックス、削除する要素数、追加要素1)
+						// 得票数を入れ替え
 						this.dataArray.splice(val, 1, obj);
-						drawBasic();
+						drawBasic(); //描画メソッドを呼び出し
 					}
 				}
 			});
