@@ -12,23 +12,12 @@
   <body>
     <h2>いろいろな型のデータを表示する演習</h2>
     <div id="app">
-      <ul>主要都市情報
-        <li>
-          都市名：{{ city[0] }}<br>
-          人口：{{ population[0] }}万人<br>
-          政令指定都市：{{ govermentCity[0] }}
-        </li>
-        <li>
-          都市名：{{ city[1] }}<br>
-          人口：{{ population[1] }}万人<br>
-          政令指定都市：{{ govermentCity[1] }}
-        </li>
-        <li>
-          都市名：{{ city[2] }}<br>
-          人口：{{ population[2] }}万人<br>
-          政令指定都市：{{ govermentCity[2] }}
-        </li>
-      </ul>
+      <table>主要都市情報
+      <tr><th>都市名</th><th>人口</th><th>政令指定都市</th></tr>
+      <tr><td>{{ city[0] }}</td><td>{{ population[0] }}万人</td><td>{{ govermentCity[0] }}</td></tr>
+      <tr><td>{{ city[1] }}</td><td>{{ population[1] }}万人</td><td>{{ govermentCity[1] }}</td></tr>
+      <tr><td>{{ city[2] }}</td><td>{{ population[2] }}万人</td><td>{{ govermentCity[2] }}</td></tr>
+      </table>
     </div>
 
     <script>
