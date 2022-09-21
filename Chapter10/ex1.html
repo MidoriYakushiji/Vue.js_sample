@@ -22,15 +22,20 @@
       </ol>
       <p>
         <label>都市名：
-            <input v-model="addItem" placeholder="追加する県庁所在地">
+          <!-- 追加する都市名をinput -->
+          <input v-model="addItem" placeholder="追加する県庁所在地">
         </label>
+        <!-- 追加ボタン -->
         <button v-on:click="addList">追加</button>
       </p>
       <p>
         <label>番号：
-            <input v-model="delItem" placeholder="0">
+          <!-- 削除する番号をinput -->
+          <input v-model.number="removeNumber">
         </label>
-        <button v-on:click="delList">削除</button>
+        <!-- 削除ボタン -->
+        <button v-on:click="delNum">削除</button>
+        
       </p>
     </div>
     
@@ -43,24 +48,13 @@
           removeNumber: 0
         },
         methods: {
-            addList: function() {
-					this.cityList.push(this.addItem);
-					this.addItem = '';
+          addList: function() {
+					  this.cityList.push(this.addItem);
+					  this.addItem = '';
 					},
-            delList: function(removeNumber) {
-					var delIdx = this.removeNumber - 1;
-					this.cityList.splice(delIdx, 1);
+          delNum: function() {
+					  this.cityList.splice(this.removeNumber-1, 1);
 					}
-          function() {
-						if (this.findWord) {
-							return this.items.filter(function(value) {
-								return (value.indexOf(this.findWord) > -1);
-							}, this);
-						} else {
-							// this.findWordが空のときは、リストをそのまま返す
-							return this.items;
-						}
-
         }
       })
     </script>
