@@ -23,6 +23,7 @@
 					onFileChange: function(e) {      
 						file = e.target.files[0]
 						if (file) {
+							// FileReaderインスタンス生成
 							var reader = new FileReader()
 							var vm = this;
 							reader.onload = function(e){
