@@ -18,12 +18,14 @@
 		</div>
 
 		<script>
+			// コンポーネントを作って表示する、パスカルケース
 			var MyComponent = {
 				template: '<p class="my-comp">Hello</p>'
 			}
 			new Vue({
 				el: '#app',
 				components: {
+					// コンポーネントのタグ名（ケバブケース）：コンポーネントのオブジェクト名
 					'my-component': MyComponent
 				}
 			})
