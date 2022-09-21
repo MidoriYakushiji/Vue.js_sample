@@ -47,11 +47,19 @@
 					this.cityList.push(this.addItem);
 					this.addItem = '';
 					},
-            delList: function() {
-					var lastIdx = this.removeNumber - 1;
-					this.dataArray.splice(lastIdx, 1);
+            delList: function(removeNumber) {
+					var delIdx = this.removeNumber - 1;
+					this.cityList.splice(delIdx, 1);
 					}
-
+          function() {
+						if (this.findWord) {
+							return this.items.filter(function(value) {
+								return (value.indexOf(this.findWord) > -1);
+							}, this);
+						} else {
+							// this.findWordが空のときは、リストをそのまま返す
+							return this.items;
+						}
 
         }
       })
