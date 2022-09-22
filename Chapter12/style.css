@@ -48,3 +48,4 @@ textarea {
 select {
 	border: 2px solid #ced4da;
 }
+table, td, th { border: 2px #808080 solid; }

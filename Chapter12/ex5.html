@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>vue.js 演習問題</title>
+    
+    <link rel="stylesheet" href="style.css" >
+    <script src=
+      "https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js">
+    </script>
+
+  </head>
+  
+  <body>
+    <h2>propsで値を渡す</h2>
+    <div id="app">
+      <ul>各国のあいさつ
+        <li>日本<br>
+            <my-component my-name="tanaka"></my-component>
+        </li>
+        <li>アメリカ<br>
+            <my-component my-name="Lincoln"></my-component>
+        </li>
+        <li>フランス<br>
+            <my-component my-name="Jeanne"></my-component>
+        </li>
+      </ul>     
+    </div>
+
+    <script>
+      var GreetingJP = {
+        
+      }
+      var GreetingEN = {
+    
+      }
+      var GreetingFR = {
+        
+      }
+
+
+      new Vue({
+        el: '#app',
+        components: {
+          ＿＿＿＿＿（４）＿＿＿＿＿: GreetingJP,
+          ＿＿＿＿＿（５）＿＿＿＿＿: GreetingEN,
+          ＿＿＿＿＿（６）＿＿＿＿＿: GreetingFR
+        }
+      })
+    </script>
+    
+    <style>
+      .my-comp {
+        width: 300px;
+        background-color: #ffffe0;
+        border: solid;
+        border-color: darkorange;
+        border-radius: 8px;
+        padding: 8px;
+      }
+    </style>
+  </body>
+</html>
