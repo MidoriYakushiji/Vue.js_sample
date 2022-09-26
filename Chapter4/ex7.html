@@ -13,10 +13,21 @@
     <h2>画像の表示をラジオボタンで切り換える例</h2>
     <div id="app">
       <h3>是非とも入社したい世界的IT企業</h3>
-      <ul>
-        
-      </ul>
-      <img ＿＿＿（１）＿＿＿></img>
+			<ul>
+				<li>
+					<input type="radio" 
+						value="Yahoo.jpg" v-model="fileName">{{ Yahoo }}
+				</li>
+				<li>
+					<input type="radio" 
+						value="Google.jpg" v-model="fileName">{{ Google }}
+				</li>
+				<li>
+					<input type="radio" 
+						value="Microsoft.jpg" v-model="fileName">{{ Microsoft }}
+				</li>
+			</ul>
+			<img v-bind:src="fileName"></img>
     </div>
 
     <script>
